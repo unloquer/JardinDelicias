@@ -1,0 +1,27 @@
+{
+  "name": "News",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "timestamp": {
+      "type": "date",
+      "required": true
+    },
+    "comment": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "resource": {
+      "type": "belongsTo",
+      "model": "Resource",
+      "foreignKey": "resourceId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Sensor",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "maxValue": {
+      "type": "number"
+    },
+    "minValue": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "resource": {
+      "type": "belongsTo",
+      "model": "Resource",
+      "foreignKey": "resourceId"
+    },
+    "events": {
+      "type": "hasMany",
+      "model": "SensorEvent",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
